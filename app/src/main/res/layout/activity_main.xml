@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Практична робота 4"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Калькулятор: вибір кабелю (7.1), струми КЗ (7.2), ХПнЕМ 3 режими + аперіодична складова, ударний струм, тепловий імпульс (7.4)"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnFillControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Заповнити контрольний приклад (7.4)"
+            android:layout_marginBottom="10dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1) Вибір кабелю (Приклад 7.1)"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P, кВт (навантаження)" />
+
+        <EditText
+            android:id="@+id/edP_kw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Напр., 2500"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="U, кВ (лінійна напруга, зазвичай 10)" />
+
+        <EditText
+            android:id="@+id/edU_kv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cosφ" />
+
+        <EditText
+            android:id="@+id/edCos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Напр., 0.9"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jдоп, А/мм² (допустима густина струму)" />
+
+        <EditText
+            android:id="@+id/edJ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Напр., 1.5"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2) Струми КЗ на шинах 10 кВ ГПП (Приклад 7.2)"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Un, кВ" />
+
+        <EditText
+            android:id="@+id/edUn_gpp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sk3, МВА (потужність 3ф КЗ у точці)" />
+
+        <EditText
+            android:id="@+id/edSk3_gpp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Напр., 250"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="k1ф (коеф. для 1ф КЗ: I1ф = k1ф·I3ф)" />
+
+        <EditText
+            android:id="@+id/edK1_gpp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Напр., 0.8"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3) ХПнЕМ (Приклад 7.4) — 3 режими"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поля: Iп0_с (система), Iп0_д (двигуни), Ta_с, Ta_д, γ, t, tвик."
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Нормальний режим"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edIpc_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Iп0_с, кА (напр., 3.9)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edIpd_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Iп0_д, кА (напр., 0.7)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTac_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ta_с, c (напр., 0.03)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTad_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ta_д, c (напр., 0.037)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edGamma_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="γ (напр., 0.71)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edT_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="t, c (напр., 0.065)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTvyk_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tвик, c (напр., 0.6)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мінімальний режим"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edIpc_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Iп0_с, кА"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edIpd_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Iп0_д, кА"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTac_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ta_с, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTad_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ta_д, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edGamma_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="γ"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edT_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="t, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTvyk_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tвик, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="10dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Аварійний режим"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edIpc_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Iп0_с, кА"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edIpd_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Iп0_д, кА"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTac_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ta_с, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTad_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ta_д, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edGamma_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="γ"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edT_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="t, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edTvyk_av"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tвик, c"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnCalcPr4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Розрахувати (ПР4)" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Результат ПР4 буде тут"
+            android:textIsSelectable="true" />
+
+    </LinearLayout>
+</ScrollView>
